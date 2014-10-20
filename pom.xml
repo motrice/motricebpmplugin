@@ -4,8 +4,8 @@
 
   <parent>
     <groupId>org.onehippo.cms7</groupId>
-    <artifactId>hippo-cms7-release</artifactId>
-    <version>7.9.3</version>
+    <artifactId>hippo-cms7-project</artifactId>
+    <version>26</version>
   </parent>
 
   <name>Motrice BPM Plugin</name>
@@ -67,8 +67,8 @@
     <jsp-api.version>2.1</jsp-api.version>
     <jstl.version>1.1.2</jstl.version>
     <taglibs.version>1.1.2</taglibs.version>
-    <commons.lang.version>2.6</commons.lang.version>
-    <junit.version>4.10</junit.version>
+    <commons.lang.version>2.6</commons.lang.version> 
+    <junit.version>4.10</junit.version> 
     <easymock.version>3.1</easymock.version>
     <freemarker.version>2.3.18</freemarker.version>
      
@@ -76,6 +76,7 @@
     <maven.plugins.filesync.version>1.0.0</maven.plugins.filesync.version>
     <repo.bootstrap>true</repo.bootstrap>
 
+    <hippo.hst.version>2.28.06</hippo.hst.version>
   </properties>
 
   <repositories>
@@ -219,9 +220,7 @@
       </activation>
       <modules>
         <module>bootstrap</module>
-        <module>cms</module>
         <module>site</module>
-        <module>essentials</module>
       </modules>
     </profile>
 
