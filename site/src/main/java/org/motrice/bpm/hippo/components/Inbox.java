@@ -52,8 +52,8 @@ public class Inbox extends MotriceBaseComponent {
             log.warn("Did not find a content bean for relative content path '{}' for pathInfo '{}'", 
                          request.getRequestContext().getResolvedSiteMapItem().getRelativeContentPath(),
                          request.getRequestContext().getResolvedSiteMapItem().getPathInfo());
-            response.setStatus(404);
-            return;
+            //response.setStatus(404);
+            //return;
         }
         request.setAttribute("document",doc);
         
