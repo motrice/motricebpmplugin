@@ -77,7 +77,37 @@
     <repo.bootstrap>true</repo.bootstrap>
 
     <hippo.hst.version>2.28.06</hippo.hst.version>
-  </properties>
+    
+    <!-- START added from  http://maven.onehippo.com/maven2/org/onehippo/cms7/hippo-cms7-release/7.9.3/hippo-cms7-release-7.9.3.pom -->
+	<hippo.addon-hst-configuration-editor.version>1.13.03</hippo.addon-hst-configuration-editor.version>
+	<hippo.addon-channel-manager.version>2.26.06</hippo.addon-channel-manager.version>
+	<hippo.addon-search-service.version>1.03.00</hippo.addon-search-service.version>
+	<hippo.commons.version>1.04.01</hippo.commons.version>
+	<hippo.cms.version>2.26.07</hippo.cms.version>
+	<hippo.frontend.plugins.version>1.01.01</hippo.frontend.plugins.version>
+	<hippo.frontend.theme.version>1.01.04</hippo.frontend.theme.version>
+	<hippo.packages.version>2.26.00</hippo.packages.version>
+	<hippo.release.version>7.9.3</hippo.release.version>
+	<hippo.repository.version>2.26.05</hippo.repository.version>
+	<hippo.services.version>1.04.01</hippo.services.version>
+	<hippo.services.eventbus.version>1.04.01</hippo.services.eventbus.version>
+	<hippo.services.contenttype.version>1.04.01</hippo.services.contenttype.version>
+	<hippo.utilities.version>1.03.00</hippo.utilities.version>
+	<forge.content-blocks.version>1.11.01</forge.content-blocks.version>
+	<forge.dashboard-document-wizard.version>1.05.00</forge.dashboard-document-wizard.version>
+	<forge.ecm-tagging.version>4.07.02</forge.ecm-tagging.version>
+	<forge.gallerypicker.version>1.13.00</forge.gallerypicker.version>
+	<forge.poll.version>1.08.00</forge.poll.version>
+	<forge.relateddocs.version>2.10.00</forge.relateddocs.version>
+	<forge.resource-bundle-editor.version>1.02.02</forge.resource-bundle-editor.version>
+	<forge.robotstxt.version>1.08.00</forge.robotstxt.version>
+	<forge.selection.version>2.08.01</forge.selection.version>
+	<forge.sitemap.version>1.06.01</forge.sitemap.version>
+	<forge.taxonomy.version>1.11.01</forge.taxonomy.version>
+	<forge.tcmp.version>1.09.00</forge.tcmp.version>
+
+    <!-- END added from  http://maven.onehippo.com/maven2/org/onehippo/cms7/hippo-cms7-release/7.9.3/hippo-cms7-release-7.9.3.pom -->
+    </properties>
 
   <repositories>
     <repository>
