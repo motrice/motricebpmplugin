@@ -26,14 +26,14 @@ mvn clean install
 ```
 
 ### Add motrice version property ###
-Add the motricebpm.version property to Your Hippo Project's pom.xml 
-```
+Add the motricebpm.version property to Your Hippo Project's pom.xml properties section.
+```xml
 <motricebpm.version>0.1.0-SNAPSHOT</motricebpm.version>
 ```
 
 ### Add content bootstrap ###
-Add the Motrice BPM content bootstrap to your Hippo project's cms/pom.xml.
-```
+Add the Motrice BPM content bootstrap dependency to your Hippo project's cms/pom.xml dependencies section.
+```xml
     <dependency>
       <groupId>org.motrice.bpm</groupId>
       <artifactId>motricebpmplugin-bootstrap-configuration</artifactId>
@@ -44,8 +44,8 @@ It will create the basic Motrice BMP configuration on content repository bootstr
 
 ### Add site plugin ###
 
-Add Motrice BPM to your site
-```
+Add Motrice BPM dependency to your Hippo project's site/pom.xml dependencies section.
+```xml
     <dependency>
       <groupId>org.motrice.bpm</groupId>
       <artifactId>motricebpmplugin-site</artifactId>
@@ -55,7 +55,7 @@ Add Motrice BPM to your site
 ```
 Add Motrice BPM spring configuration to you Hippo project's site/src/main/webapp/WEB-INF/web.xml, the actual applicationContext.xml is imported by maven dependencies to motrice libraries.
 
-```
+```xml
 <!--  motrice spring config -->
   <context-param>
     <param-name>contextConfigLocation</param-name>
@@ -68,4 +68,12 @@ Add Motrice BPM spring configuration to you Hippo project's site/src/main/webapp
   
   <!-- end of spring config -->
 ```
+Compile and start the Hippo Site
+```
+mvn clean install
+mvn -P cargo.run
+```
+Add motrice plugin to Your project's hst:configuration in Hippo CMS Console. 
+See sample below 
+<img src="doc/images/add-motricebpm-inheritsfrom-to-configuration.png"/>
 
