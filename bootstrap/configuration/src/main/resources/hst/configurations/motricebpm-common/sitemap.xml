@@ -10,5 +10,8 @@
     <sv:property sv:name="hst:componentconfigurationid" sv:type="String">
       <sv:value>hst:pages/motriceinbox</sv:value>
     </sv:property>
+    <sv:property sv:name="hst:relativecontentpath" sv:type="String">
+        <sv:value>inbox</sv:value>
+    </sv:property>
   </sv:node>
 </sv:node>
