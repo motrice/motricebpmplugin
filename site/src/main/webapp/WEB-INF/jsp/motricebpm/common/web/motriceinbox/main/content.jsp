@@ -25,6 +25,54 @@
  
  
 <%@ include file="/WEB-INF/jspf/htmlTags.jspf"%>
-<%--@elvariable id="document" type="org.inheritsource.portal.beans.NewsDocument"--%>
+<%--@elvariable id="document" type="org.motrice.bpm.hippo.beans.MotriceDocument"--%>
 
-testa inbox blurp ${tasks}
+<c:choose>
+	<c:when test="${empty document}">
+		<!-- tag:pagenotfound / -->
+	</c:when>
+	<c:otherwise>
+		<c:if test="${not empty document.title}">
+			<hst:element var="headTitle" name="title">
+				<c:out value="${document.title}" />
+			</hst:element>
+			<hst:headContribution keyHint="headTitle" element="${headTitle}" />
+		</c:if>
+
+		<hst:cmseditlink hippobean="${document}" />
+		<h2>${document.title}</h2>
+		<p>${document.summary}</p>
+		<hst:html hippohtml="${document.body}" />
+
+	</c:otherwise>
+</c:choose>
+
+<table cellpadding="0" cellspacing="0" border="0"
+	class="display dataTable" width="100%">
+	<thead>
+		<tr>
+			<th><fmt:message key="mycases.process.column.lbl" /></th>
+			<th><fmt:message key="mycases.startDate.column.lbl" /></th>
+			<th><fmt:message key="mycases.activity.column.lbl" /></th>
+		</tr>
+	</thead>
+	<tbody>
+		<c:choose>
+			<c:when test="${not empty tasks}">
+				<c:forEach var="task" items="${tasks}">
+					<tr>
+						<td>${task.processLabel}</td>
+						<td><fmt:formatDate value="${task.activityCreated}"
+								type="Date" dateStyle="short" timeStyle="short"/></td>
+						<td><a href="${task.relativePageLink}">${task.activityLabel}</a></td>
+					</tr>
+				</c:forEach>
+			</c:when>
+			<c:otherwise>
+				<tr>
+					<td colspan="3"><fmt:message key="mycases.noActivity.lbl" /></td>
+				</tr>
+			</c:otherwise>
+		</c:choose>
+	</tbody>
+</table>
