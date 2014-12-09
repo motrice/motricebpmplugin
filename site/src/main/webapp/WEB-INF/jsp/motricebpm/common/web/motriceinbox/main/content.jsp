@@ -22,10 +22,11 @@
   phone: +46 8 641 64 14 
  
 --%> 
- 
- 
+
 <%@ include file="/WEB-INF/jspf/htmlTags.jspf"%>
 <%--@elvariable id="document" type="org.motrice.bpm.hippo.beans.MotriceDocument"--%>
+
+<fmt:bundle basename="motricebundle">
 
 <c:choose>
 	<c:when test="${empty document}">
@@ -76,3 +77,4 @@
 		</c:choose>
 	</tbody>
 </table>
+</fmt:bundle>
